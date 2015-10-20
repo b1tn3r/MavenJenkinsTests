@@ -17,7 +17,9 @@ public class BankAccountTest {
     @Test
     public void testDebit() throws Exception {
         double amount = account.debit(5);
-        assertEquals(5.0, amount);
+        if(5.0 != amount) {
+            fail();
+        }
     }
 
     @After
